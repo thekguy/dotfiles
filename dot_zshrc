@@ -119,3 +119,4 @@ source $ZSH/oh-my-zsh.sh
 export ENABLE_TEST_LOGS=true
 export PATH=$PATH:$HOME/.local/bin
 alias vim='nvim'
+export PGPASSWORD=op://Private/cloudquery/password

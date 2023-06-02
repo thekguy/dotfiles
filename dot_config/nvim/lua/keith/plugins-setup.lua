@@ -93,6 +93,21 @@ return packer.startup(function(use)
     end,
   })
 
+  use ({
+    "nathom/filetype.nvim",
+    config = function()
+        require("filetype").setup {
+            overrides = {
+                extensions = {
+                    tf = "terraform",
+                    tfvars = "terraform",
+                    tfstate = "json",
+                },
+            },
+        }
+    end,
+  })
+
   -- auto closing
   use("windwp/nvim-autopairs")
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
